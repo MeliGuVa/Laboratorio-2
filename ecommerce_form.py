@@ -61,8 +61,10 @@ if __name__ == "__main__":
     """
 
     purchase = OnlinePurchase()
-    values = [-1, 0.5, 0]
+    cart = {
+        "Laptop": 1
+    }
 
-    for value in values:
-        print(f"{value}: {purchase.validate_quantity(value)}")
+    final_purchase = purchase.process_purchase(cart, "DISCOUNT10", "Casa")
+    print(final_purchase)
     
