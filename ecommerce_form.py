@@ -53,18 +53,8 @@ class OnlinePurchase:
 
 
 if __name__ == "__main__":
-    """
-        El sistema debe rechazar números negativos, cero o valores que no sean enteros
-        en la cantidad.
 
-        CASO NEGATIVO
-    """
-
-    purchase = OnlinePurchase()
-    cart = {
-        "Laptop": 1
-    }
-
-    final_purchase = purchase.process_purchase(cart, "DISCOUNT10", "Casa")
-    print(final_purchase)
-    
+   shop = OnlinePurchase()
+   
+   print(shop.validate_address("Avenida Patria"))
+   print(shop.validate_address("Casa"))
