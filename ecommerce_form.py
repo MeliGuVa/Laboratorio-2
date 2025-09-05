@@ -54,13 +54,15 @@ class OnlinePurchase:
 
 if __name__ == "__main__":
     """
-        El sistema debe aceptar únicamente códigos de cupón válidos almacenados en el
-        sistema (DISCOUNT10 y DISCOUNT20).
+        El sistema debe rechazar números negativos, cero o valores que no sean enteros
+        en la cantidad.
 
         CASO NEGATIVO
     """
-    purchase = OnlinePurchase()
-    pos_coupons = ["DISCOUNT30", "DISCOUNT100"]
 
-    for coupon in pos_coupons:
-        print(f"{coupon}: {purchase.validate_coupon(coupon)}") 
+    purchase = OnlinePurchase()
+    values = [-1, 0.5, 0]
+
+    for value in values:
+        print(f"{value}: {purchase.validate_quantity(value)}")
+    
